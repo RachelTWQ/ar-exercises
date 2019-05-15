@@ -11,4 +11,7 @@ puts "----------"
 
 # Your code goes here ...
 print "Please enter a store name:"
-@store = $stdin.gets.chomp
+@new_store = $stdin.gets.chomp
+
+Store.create(name: @new_store)
+puts @new_store.errors.full_messages
